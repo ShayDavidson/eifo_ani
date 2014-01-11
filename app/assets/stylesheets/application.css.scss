@@ -4,6 +4,15 @@ html, body, #wrapper {
   margin: 0;
 }
 
+#logo-big {
+  $img-width: 612px;
+
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -$img-width * 0.5;
+}
+
 #panorama {
   height: 100%;
   width: 100%;

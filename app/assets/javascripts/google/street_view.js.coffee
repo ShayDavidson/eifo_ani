@@ -1,8 +1,8 @@
 class window.StreetViewService
 
   telAvivCenter:
-    lat: 32.075257
-    lng: 34.774804
+    lat: 32.086604
+    lng: 34.789512
 
   telAvivRadius: 3.5
   metersInDegree: 111300
@@ -17,5 +17,5 @@ class window.StreetViewService
   constructor: ->
     @panorama = new google.maps.StreetViewPanorama(document.getElementById('panorama'), @panoramaOptions)
     @panorama.setPosition(new google.maps.LatLng(@telAvivCenter.lat, @telAvivCenter.lng))
-    @panorama.setPov(heading: 270, pitch: 0)
+    @panorama.setPov(heading: 90, pitch: 10)
 
