@@ -1,8 +1,11 @@
-body {
+html, body, #wrapper {
+  height: 100%;
+  width: 100%;
   margin: 0;
 }
 
 #panorama {
+  height: 100%;
   width: 100%;
-  height: 600px;
+
 }
