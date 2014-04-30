@@ -16,12 +16,13 @@ class window.StreetViewService
     disableDefaultUI: true
 
   constructor: (options = {}) ->
-    _.extend(@panoramaOptions, draggable: false, scrollwheel: false, clickToGo: false) if options.disableInteraction
+    element = document.getElementById('panorama')
 
-    @panorama = new google.maps.StreetViewPanorama(document.getElementById('panorama'), @panoramaOptions)
+    @panorama = new google.maps.StreetViewPanorama(element, @panoramaOptions)
     @panorama.setPosition(new google.maps.LatLng(options.lat, options.lng))
     @panorama.setPov(heading: @defaultHeading, pitch: @defaultPitch)
 
+    $(element).css('pointer-events': 'none') if options.disableInteraction
     @spin() if options.spin
 
   spin: ->
