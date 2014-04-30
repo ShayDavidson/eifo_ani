@@ -13,3 +13,6 @@ gem 'haml'
 gem 'configreader'
 gem 'powder'
 gem 'quiet_assets'
+gem 'rails_12factor', :group => :production
+
+ruby '2.0.0'
