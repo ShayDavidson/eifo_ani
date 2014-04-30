@@ -1,2 +1,8 @@
+.fade-in-start {
+  @include opacity(0);
+}
+
 .fade-in {
+  @include transition(opacity 2s);
+  @include opacity(1);
 }

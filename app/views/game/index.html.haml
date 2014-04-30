@@ -1,13 +1,25 @@
 #wrapper
   #panorama
-  #logo-big.fade-in= image_tag('logo.png')
+  #logo-big.fade-in-start= image_tag('logo.png')
 
 :javascript
   $(document).ready(function() {
+
     new window.StreetViewService({
       lat: 32.086604,
       lng: 34.789512,
       spin: true,
       disableInteraction: true,
     })
+
+    setTimeout(function() {
+      eifoAniTheme = new buzz.sound('/sounds/eifo-ani', {
+          formats: [ 'ogg', 'mp3' ]
+      });
+      eifoAniTheme.play()
+
+      $('#logo-big').removeClass('fade-in-start').addClass('fade-in')
+
+    }, 1000)
+
   });
