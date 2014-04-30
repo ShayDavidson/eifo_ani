@@ -1,7 +1,5 @@
 #= require jquery
 #= require jquery_ujs
+#= require underscore
 #= require turbolinks
 #= require_tree .
-
-$(document).ready ->
-  new window.StreetViewService()

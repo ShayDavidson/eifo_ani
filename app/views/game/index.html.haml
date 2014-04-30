@@ -1,3 +1,13 @@
 #wrapper
   #panorama
   #logo-big= image_tag('logo.png')
+
+:javascript
+  $(document).ready(function() {
+    new window.StreetViewService({
+      lat: 32.086604,
+      lng: 34.789512,
+      spin: true,
+      disableInteraction: true,
+    })
+  });
