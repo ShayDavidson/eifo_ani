@@ -1,6 +1,9 @@
 #wrapper
-  #panorama.blur
-  #logo-big.fade-in-start= image_tag('logo.png')
+  #panorama
+.container.fade-in-start
+  #logo-big.center-block= image_tag('logo.png')
+  .actions
+    %button.center-block{:type => :button, :class =>'btn btn-default'}= 'משחק חדש'
 
 :javascript
   $(document).ready(function() {
@@ -16,9 +19,9 @@
       eifoAniTheme = new buzz.sound('/sounds/eifo-ani', {
           formats: [ 'ogg', 'mp3' ]
       });
-      eifoAniTheme.play()
+      //eifoAniTheme.play()
 
-      $('#logo-big').removeClass('fade-in-start').addClass('fade-in')
+      $('.fade-in-start').removeClass('fade-in-start').addClass('fade-in')
 
     }, 1000)
 
